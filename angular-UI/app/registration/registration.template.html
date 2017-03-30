@@ -1,0 +1,40 @@
+  <div class="basicForm">
+          <div class="h2">
+              <h2>Please enter a User Name and Password</h2>
+              <div>
+             
+        <!--<div class="basicForm">-->
+          <div class="h2">
+            <div class="form-group">
+              <input type="text" [(ngModel)]="users.userName" placeholder="User Name" class="form-control">
+            </div><br>
+            <div class="form-group">
+              <input type="password" name="pass" [(ngModel)]="users.pass" placeholder="Password"  class="form-control">
+            </div><br>
+            <!--<button type="submit" (click) = "onSubmit()" class="btn btn-primary">Submit</button>-->
+          </div>
+        <!--</div>-->
+     
+        <!--<div  class="basicForm">-->
+          <div  class="h2">
+              <h2>Please enter a User Name and Password</h2>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="users.firstName" placeholder="First Name" class="form-control">
+            </div><br>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="users.lastName" placeholder="Last Name" class="form-control">
+            </div><br>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="users.email" placeholder="Email" class="form-control">
+            </div><br>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="users.accessLevel" placeholder="Access Level" class="form-control">
+            </div><br>
+            <button type="submit" (click) = "onSubmit()" class="btn btn-success">Submit</button>
+             <button type="button" (click) = "onCancel()" class="btn btn-primary">Cancel</button>
+          </div>
+        <!--</div>-->
+     
+              </div>
+          </div>
+  </div>

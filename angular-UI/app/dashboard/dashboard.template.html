@@ -1,0 +1,32 @@
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<a class="navbar-brand" [routerLink]="['/student-record']" routerLinkActive = "active" >Students</a>-->
+          <a class="navbar-brand" href="#">Track-IT</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          
+          <ul class="nav navbar-nav">
+            <li><a href="" [routerLink]="['/login']">Login</a></li>
+            <li><a href="" [routerLink]="['/asset']">asset</a></li>
+            <li><a href="" [routerLink]="['/users']">users</a></li>
+            <li><a href="" [routerLink]="['/access']">access</a></li>
+            <li *ngIf="usersService.loggedinUser !=undefined">{{usersService.loggedinUser.firstName}} {{usersService.loggedinUser.lastName}}</li>
+            <!--<div class="form-group">
+              <input type="text" [(ngModel)]="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type=""  class="btn btn-success">Sign in</button>-->
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
