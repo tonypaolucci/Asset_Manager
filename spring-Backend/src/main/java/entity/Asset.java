@@ -39,9 +39,19 @@ public class Asset {
 	String version;
 	@Column(name="notes")
 	String notes;
+	@Column(name="assigned_user")
+	String assignedUser;
 	
 	public Asset(){}
 	
+	public String getAssignedUser() {
+		return assignedUser;
+	}
+
+	public void setAssignedUser(String assignedUser) {
+		this.assignedUser = assignedUser;
+	}
+
 	public int getAssetNum() {
 		return assetNum;
 	}

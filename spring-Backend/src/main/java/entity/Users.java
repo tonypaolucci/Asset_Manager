@@ -26,6 +26,14 @@ public class Users {
 	public Users()
 	{}
 	
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
 	public String getUserName() {
 		return userName;
 	}
