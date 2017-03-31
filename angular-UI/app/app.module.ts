@@ -21,13 +21,15 @@ import {HomeComponent} from './home/home.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { DashboardService }   from './dashboard/dashboard.service';
 import { DashboardComponent }   from './dashboard/dashboard.component';
+import {DashComponent} from './startbootstrap-sb-admin-gh-pages/dash.component';
+import {DashService} from './startbootstrap-sb-admin-gh-pages/dash.service';
 
 export function AppModule(baseUrl:string){ 
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,HttpModule,appRouting ],
-  declarations: [ AppComponent,HomeComponent, RegistrationComponent, UsersComponent, AccessComponent, AssetComponent, WelcomeComponent, LoginComponent, DashboardComponent ],
-  providers: [UsersService,RegistrationService,AssetService,AccessService,WelcomeService,LoginService,DashboardService,
+  declarations: [ AppComponent,HomeComponent, RegistrationComponent, UsersComponent, AccessComponent, AssetComponent, WelcomeComponent, LoginComponent, DashboardComponent,DashComponent ],
+  providers: [UsersService,RegistrationService,AssetService,AccessService,WelcomeService,LoginService,DashboardService,DashService,
    {provide :'baseUrl', useValue:baseUrl} 
   ],
   bootstrap:    [ AppComponent ]

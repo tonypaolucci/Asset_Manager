@@ -37,7 +37,7 @@ ngOnInit(){
         this.usersService.loggedinUser = data;
         console.log(data.firstName);
         console.log(this.usersService.loggedinUser.firstName);
-        this.router.navigate(['dashboard']) 
+        this.router.navigate(['dash']) 
       
       
       }, 

@@ -42,7 +42,8 @@ RegistrationComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'registration-form',
-        templateUrl: 'registration.template.html'
+        templateUrl: 'registration.template.html',
+        styleUrls: ['/css']
     }),
     __metadata("design:paramtypes", [registration_service_1.RegistrationService, users_service_1.UsersService, login_service_1.LoginService,
         router_1.Router])

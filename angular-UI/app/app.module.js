@@ -26,6 +26,8 @@ var home_component_1 = require("./home/home.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var dashboard_service_1 = require("./dashboard/dashboard.service");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
+var dash_component_1 = require("./startbootstrap-sb-admin-gh-pages/dash.component");
+var dash_service_1 = require("./startbootstrap-sb-admin-gh-pages/dash.service");
 function AppModule(baseUrl) {
     var AppComponentModule = (function () {
         function AppComponentModule() {
@@ -35,8 +37,8 @@ function AppModule(baseUrl) {
     AppComponentModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, app_routing_1.appRouting],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, registration_component_1.RegistrationComponent, users_component_1.UsersComponent, access_component_1.AccessComponent, asset_component_1.AssetComponent, welcome_component_1.WelcomeComponent, login_component_1.LoginComponent, dashboard_component_1.DashboardComponent],
-            providers: [users_service_1.UsersService, registration_service_1.RegistrationService, asset_service_1.AssetService, access_service_1.AccessService, welcome_service_1.WelcomeService, login_service_1.LoginService, dashboard_service_1.DashboardService,
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, registration_component_1.RegistrationComponent, users_component_1.UsersComponent, access_component_1.AccessComponent, asset_component_1.AssetComponent, welcome_component_1.WelcomeComponent, login_component_1.LoginComponent, dashboard_component_1.DashboardComponent, dash_component_1.DashComponent],
+            providers: [users_service_1.UsersService, registration_service_1.RegistrationService, asset_service_1.AssetService, access_service_1.AccessService, welcome_service_1.WelcomeService, login_service_1.LoginService, dashboard_service_1.DashboardService, dash_service_1.DashService,
                 { provide: 'baseUrl', useValue: baseUrl }
             ],
             bootstrap: [app_component_1.AppComponent]

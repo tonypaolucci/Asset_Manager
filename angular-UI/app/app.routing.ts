@@ -8,6 +8,7 @@ import {AssetComponent} from './asset/asset.component';
 import {AccessComponent} from './access/access.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {DashComponent} from './startbootstrap-sb-admin-gh-pages/dash.component';
 const appRoutes: Routes = [
 {
     path:'',
@@ -48,6 +49,11 @@ const appRoutes: Routes = [
 {
     path:'dashboard',
     component:DashboardComponent
+
+},
+{
+    path:'dash',
+    component:DashComponent
 
 }
 

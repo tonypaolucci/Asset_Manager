@@ -5,7 +5,8 @@ import {Router} from'@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'welcome',
-  templateUrl: 'welcome.template.html'
+  templateUrl: 'welcome.template.html',
+  styleUrls: ['./welcome.css']
   
 })
 export class WelcomeComponent implements OnInit{

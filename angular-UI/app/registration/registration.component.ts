@@ -8,7 +8,8 @@ import {Router} from'@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'registration-form',
-  templateUrl: 'registration.template.html'
+  templateUrl: 'registration.template.html',
+  styleUrls: ['/css']
   
 })
 export class RegistrationComponent implements OnInit{

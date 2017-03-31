@@ -29,7 +29,8 @@ WelcomeComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'welcome',
-        templateUrl: 'welcome.template.html'
+        templateUrl: 'welcome.template.html',
+        styleUrls: ['./welcome.css']
     }),
     __metadata("design:paramtypes", [welcome_service_1.WelcomeService,
         router_1.Router])

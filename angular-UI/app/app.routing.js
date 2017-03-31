@@ -7,6 +7,7 @@ var asset_component_1 = require("./asset/asset.component");
 var access_component_1 = require("./access/access.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
+var dash_component_1 = require("./startbootstrap-sb-admin-gh-pages/dash.component");
 var appRoutes = [
     {
         path: '',
@@ -40,6 +41,10 @@ var appRoutes = [
     {
         path: 'dashboard',
         component: dashboard_component_1.DashboardComponent
+    },
+    {
+        path: 'dash',
+        component: dash_component_1.DashComponent
     }
 ];
 exports.appRouting = router_1.RouterModule.forRoot(appRoutes);
