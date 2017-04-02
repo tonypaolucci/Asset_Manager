@@ -14,6 +14,8 @@ import { UsersComponent }   from './users/users.component';
 import {AssetComponent }   from './asset/asset.component';
 import { AccessComponent }   from './access/access.component';
 import {LoginComponent }   from './login/login.component';
+import { AssetViewService }   from './assetView/assetView.service';
+import {AssetViewComponent }   from './assetView/assetView.component';
 
 import { RegistrationComponent }   from './registration/registration.component';
 import {appRouting} from './app.routing';
@@ -28,8 +30,8 @@ export function AppModule(baseUrl:string){
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,HttpModule,appRouting ],
-  declarations: [ AppComponent,HomeComponent, RegistrationComponent, UsersComponent, AccessComponent, AssetComponent, WelcomeComponent, LoginComponent, DashboardComponent,DashComponent ],
-  providers: [UsersService,RegistrationService,AssetService,AccessService,WelcomeService,LoginService,DashboardService,DashService,
+  declarations: [ AppComponent,HomeComponent, RegistrationComponent, UsersComponent, AccessComponent, AssetComponent, WelcomeComponent, LoginComponent, DashboardComponent,DashComponent,AssetViewComponent ],
+  providers: [UsersService,RegistrationService,AssetService,AccessService,WelcomeService,LoginService,DashboardService,DashService,AssetViewService,
    {provide :'baseUrl', useValue:baseUrl} 
   ],
   bootstrap:    [ AppComponent ]

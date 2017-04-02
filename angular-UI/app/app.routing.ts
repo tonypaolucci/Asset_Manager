@@ -5,6 +5,7 @@ import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {UsersComponent} from './users/users.component';
 import {AssetComponent} from './asset/asset.component';
+import {AssetViewComponent} from './assetView/assetView.component';
 import {AccessComponent} from './access/access.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -12,7 +13,7 @@ import {DashComponent} from './startbootstrap-sb-admin-gh-pages/dash.component';
 const appRoutes: Routes = [
 {
     path:'',
-    redirectTo:'welcome',
+    redirectTo:'dashboard',
     pathMatch:'full'
 
 },
@@ -29,6 +30,11 @@ const appRoutes: Routes = [
 {
     path:'asset',
     component:AssetComponent
+
+},
+{
+    path:'assetview',
+    component:AssetViewComponent
 
 },
 {

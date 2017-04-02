@@ -1,3 +1,44 @@
+@charset "utf-8";
 .welcome{
-    margin: 125px auto 0 !important;
+    margin: 125px auto 0 10% !important;
+   
   }
+
+  .imgContainer {
+    position: relative;
+}
+
+.topleft {
+    position: fixed;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 100%;
+}
+
+/*@media only screen and (max-width: 700px){
+    .responsive {
+        width: 100%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}*/
+
+img { 
+    /*width: 100%;
+    height: auto;*/
+     /*background-size: cover;*/
+     background-size: cover;
+    background-attachment: fixed;
+    /*opacity: 0.3;*/
+}
+

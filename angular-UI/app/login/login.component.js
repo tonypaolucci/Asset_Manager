@@ -37,7 +37,7 @@ var LoginComponent = (function () {
             _this.usersService.loggedinUser = data;
             console.log(data.firstName);
             console.log(_this.usersService.loggedinUser.firstName);
-            _this.router.navigate(['dash']);
+            _this.router.navigate(['dashboard']);
         }, 
         //this.router.navigate(['welcome'])},
         function (error) { _this.errorMessage = 'Your user name or password did not match our records.'; });

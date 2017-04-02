@@ -1,3 +1,9 @@
+body{
+  background: url("../resources/computer-767776_640.jpg");
+   background-size: cover;
+  position: "fixed" !important;
+  background-repeat: no-repeat;
+}
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;

@@ -4,6 +4,7 @@ var login_component_1 = require("./login/login.component");
 var registration_component_1 = require("./registration/registration.component");
 var users_component_1 = require("./users/users.component");
 var asset_component_1 = require("./asset/asset.component");
+var assetView_component_1 = require("./assetView/assetView.component");
 var access_component_1 = require("./access/access.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
@@ -11,7 +12,7 @@ var dash_component_1 = require("./startbootstrap-sb-admin-gh-pages/dash.componen
 var appRoutes = [
     {
         path: '',
-        redirectTo: 'welcome',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
     },
     {
@@ -25,6 +26,10 @@ var appRoutes = [
     {
         path: 'asset',
         component: asset_component_1.AssetComponent
+    },
+    {
+        path: 'assetview',
+        component: assetView_component_1.AssetViewComponent
     },
     {
         path: 'access',

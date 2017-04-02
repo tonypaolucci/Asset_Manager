@@ -22,6 +22,8 @@ var AssetComponent = (function () {
     };
     AssetComponent.prototype.onSubmit = function () {
         this.assetService.submitAssetDetails(this.asset).subscribe();
+        this.success = 'SUCCESS!';
+        this.asset = new asset_model_1.Asset();
     };
     return AssetComponent;
 }());
@@ -29,7 +31,8 @@ AssetComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'asset-form',
-        templateUrl: 'asset.template.html'
+        templateUrl: 'asset.template.html',
+        styleUrls: ['asset.css']
     }),
     __metadata("design:paramtypes", [asset_service_1.AssetService,
         router_1.Router])

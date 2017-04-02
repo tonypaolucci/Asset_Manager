@@ -6,7 +6,8 @@ import {Router} from'@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'dashboard',
-  templateUrl: 'dashboard.template.html'
+  templateUrl: 'dashboard.template.html',
+  styleUrls: ['dashboard.css']
   
 })  
 

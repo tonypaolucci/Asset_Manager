@@ -32,7 +32,8 @@ DashboardComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'dashboard',
-        templateUrl: 'dashboard.template.html'
+        templateUrl: 'dashboard.template.html',
+        styleUrls: ['dashboard.css']
     }),
     __metadata("design:paramtypes", [dashboard_service_1.DashboardService, users_service_1.UsersService,
         router_1.Router])

@@ -1,15 +1,15 @@
 
-    <!--<nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>-->
           <!--<a class="navbar-brand" [routerLink]="['/student-record']" routerLinkActive = "active" >Students</a>-->
-          <!--<a class="navbar-brand" href="#">Track-IT</a>
+          <a class="navbar-brand" href="#">Track-IT</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           
@@ -18,7 +18,6 @@
             <li><a href="" [routerLink]="['/asset']">asset</a></li>
             <li><a href="" [routerLink]="['/users']">users</a></li>
             <li><a href="" [routerLink]="['/access']">access</a></li>
-            <li *ngIf="usersService.loggedinUser !=undefined">{{usersService.loggedinUser.firstName}} {{usersService.loggedinUser.lastName}}</li>-->
             <!--<div class="form-group">
               <input type="text" [(ngModel)]="email" placeholder="Email" class="form-control">
             </div>
@@ -26,10 +25,15 @@
               <input type="password" placeholder="Password" class="form-control">
             </div>
             <button type=""  class="btn btn-success">Sign in</button>-->
-          <!--</ul>-->
-        <!--</div>/.navbar-collapse -->
-      <!--</div>
-    </nav>-->
+          </ul>
+        <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="usersService.loggedinUser !=undefined" class="loggedIn">{{usersService.loggedinUser.firstName}} {{usersService.loggedinUser.lastName}}</li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <!--<div class="jumbotron">

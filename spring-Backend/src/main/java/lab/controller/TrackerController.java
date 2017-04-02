@@ -92,11 +92,20 @@ public class TrackerController {
 	{
 		assetRepository.save(asset);
 	}
-//	@RequestMapping(value="/asset", 
-//			 produces = MediaType.APPLICATION_JSON_VALUE,
-//			method= RequestMethod.GET)
-//	public List<Asset> getAssetsByType(@RequestBody String type)
-//	{
-//		//assetRepository;
-//	}
+	@RequestMapping(value="/asset", 
+			 produces = MediaType.APPLICATION_JSON_VALUE,
+			method= RequestMethod.GET)
+	public List<Asset> getAssetsByType(@RequestBody String type)
+	{
+		return null;
+		//assetRepository;
+	}
+	@RequestMapping(value="/assigned_asset", 
+			 produces = MediaType.APPLICATION_JSON_VALUE,
+			method= RequestMethod.GET)
+	public List<Asset> getAssetsByEmail(@RequestBody String email)
+	{
+		return assetRepository.getAssetByEmail(email);
+		//assetRepository;
+	}
 }

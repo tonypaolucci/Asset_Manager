@@ -1,0 +1,39 @@
+
+        <div  class="row">
+          <div class="col-sm-4">
+            <label>Search all equipment assigned to employee using email.</label>
+          </div>
+          </div>
+        <div  class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+                
+              <input type="search" [(ngModel)]="assetView.search" placeholder="Email" class="form-control">
+              <!--<input type="text" [(ngModel)]="assetView.search" #asset placeholder="E" class="form-control">-->
+            </div><br>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+                 <button type="submit" (click) = "onSubmit()" class="btn btn-success">Search</button>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                  <table class="table table-condensed table-hover table-responsive">
+                    <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                   <tr *ngFor="let s of asset">
+                     <td>{{s.firstName}} {{s.lastName}} {{s.email}} {{s.telephone}}</td>
+                  </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+
+          

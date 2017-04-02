@@ -3,3 +3,8 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+.loggedIn{
+  color: #ffffff;
+  font-size: 10pt;
+  margin: 16px auto 0;
+}

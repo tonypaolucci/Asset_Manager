@@ -1,0 +1,6 @@
+.panel{
+    margin: 35px auto;
+    /*opacity: 0.81;
+    background-color: darkgrey;*/
+    background: rgba(169, 169, 169, 0.3)
+}

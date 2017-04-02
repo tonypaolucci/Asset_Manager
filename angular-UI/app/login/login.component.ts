@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{LoginService} from './login.service';
-import{UsersService} from '../users/users.service'
+import{UsersService} from '../users/users.service';
 import {Login} from './login.model';
 import {Router} from'@angular/router';
 @Component({
@@ -37,7 +37,7 @@ ngOnInit(){
         this.usersService.loggedinUser = data;
         console.log(data.firstName);
         console.log(this.usersService.loggedinUser.firstName);
-        this.router.navigate(['dash']) 
+        this.router.navigate(['dashboard']) 
       
       
       }, 
