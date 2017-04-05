@@ -14,7 +14,6 @@ var users_service_1 = require("../users/users.service");
 var login_model_1 = require("./login.model");
 var router_1 = require("@angular/router");
 var LoginComponent = (function () {
-    //userService:UsersService;
     function LoginComponent(loginService, usersService, router) {
         this.loginService = loginService;
         this.usersService = usersService;
@@ -25,22 +24,19 @@ var LoginComponent = (function () {
         this.userName = '';
         this.pass = '';
         this.errorMessage = '';
-        //this.userService = this.usersService;
     };
+    // executes login method from the service
     LoginComponent.prototype.onSubmit = function () {
         var _this = this;
         var login = new login_model_1.Login();
         login.userName = this.userName;
         login.pass = this.pass;
-        // this.loginService.submitLoginDetails(this.login).subscribe();
         this.loginService.login(login.userName, login.pass).subscribe(function (data) {
             _this.usersService.loggedinUser = data;
             console.log(data.firstName);
             console.log(_this.usersService.loggedinUser.firstName);
             _this.router.navigate(['dashboard']);
-        }, 
-        //this.router.navigate(['welcome'])},
-        function (error) { _this.errorMessage = 'Your user name or password did not match our records.'; });
+        }, function (error) { _this.errorMessage = 'Your user name or password did not match our records.'; });
     };
     LoginComponent.prototype.onCancel = function () {
         this.router.navigate(['welcome']);
@@ -51,7 +47,8 @@ LoginComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'login-form',
-        templateUrl: 'login.template.html'
+        templateUrl: 'login.template.html',
+        styleUrls: ['./styles.css']
     }),
     __metadata("design:paramtypes", [login_service_1.LoginService, users_service_1.UsersService,
         router_1.Router])

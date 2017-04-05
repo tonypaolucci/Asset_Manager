@@ -15,6 +15,7 @@ var users_model_1 = require("./users.model");
 var UsersService = (function () {
     function UsersService(http) {
         this.http = http;
+        this.login = 'Login';
     }
     UsersService.prototype.submitUsersDetails = function (users) {
         return this.http.post("http://localhost:8080/users", users).map(function (res) { return res.json(); });

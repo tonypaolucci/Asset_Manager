@@ -8,11 +8,11 @@ var assetView_component_1 = require("./assetView/assetView.component");
 var access_component_1 = require("./access/access.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
-var dash_component_1 = require("./startbootstrap-sb-admin-gh-pages/dash.component");
+var modal_component_1 = require("./modal/modal.component");
 var appRoutes = [
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'welcome',
         pathMatch: 'full'
     },
     {
@@ -47,9 +47,10 @@ var appRoutes = [
         path: 'dashboard',
         component: dashboard_component_1.DashboardComponent
     },
+    // routing for a future modal form
     {
-        path: 'dash',
-        component: dash_component_1.DashComponent
+        path: 'modal',
+        component: modal_component_1.ModalComponent
     }
 ];
 exports.appRouting = router_1.RouterModule.forRoot(appRoutes);

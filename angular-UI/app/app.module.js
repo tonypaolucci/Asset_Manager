@@ -22,14 +22,17 @@ var access_component_1 = require("./access/access.component");
 var login_component_1 = require("./login/login.component");
 var assetView_service_1 = require("./assetView/assetView.service");
 var assetView_component_1 = require("./assetView/assetView.component");
+var userUpdate_service_1 = require("./userUpdate/userUpdate.service");
+var userUpdate_component_1 = require("./userUpdate/userUpdate.component");
+var assetUpdate_service_1 = require("./assetUpdate/assetUpdate.service");
+var assetUpdate_component_1 = require("./assetUpdate/assetUpdate.component");
 var registration_component_1 = require("./registration/registration.component");
 var app_routing_1 = require("./app.routing");
 var home_component_1 = require("./home/home.component");
 var welcome_component_1 = require("./welcome/welcome.component");
 var dashboard_service_1 = require("./dashboard/dashboard.service");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
-var dash_component_1 = require("./startbootstrap-sb-admin-gh-pages/dash.component");
-var dash_service_1 = require("./startbootstrap-sb-admin-gh-pages/dash.service");
+var modal_component_1 = require("./modal/modal.component");
 function AppModule(baseUrl) {
     var AppComponentModule = (function () {
         function AppComponentModule() {
@@ -39,8 +42,8 @@ function AppModule(baseUrl) {
     AppComponentModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, app_routing_1.appRouting],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, registration_component_1.RegistrationComponent, users_component_1.UsersComponent, access_component_1.AccessComponent, asset_component_1.AssetComponent, welcome_component_1.WelcomeComponent, login_component_1.LoginComponent, dashboard_component_1.DashboardComponent, dash_component_1.DashComponent, assetView_component_1.AssetViewComponent],
-            providers: [users_service_1.UsersService, registration_service_1.RegistrationService, asset_service_1.AssetService, access_service_1.AccessService, welcome_service_1.WelcomeService, login_service_1.LoginService, dashboard_service_1.DashboardService, dash_service_1.DashService, assetView_service_1.AssetViewService,
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, registration_component_1.RegistrationComponent, users_component_1.UsersComponent, access_component_1.AccessComponent, asset_component_1.AssetComponent, welcome_component_1.WelcomeComponent, login_component_1.LoginComponent, dashboard_component_1.DashboardComponent, assetView_component_1.AssetViewComponent, modal_component_1.ModalComponent, userUpdate_component_1.UserUpdateComponent, assetUpdate_component_1.AssetUpdateComponent],
+            providers: [users_service_1.UsersService, registration_service_1.RegistrationService, asset_service_1.AssetService, access_service_1.AccessService, welcome_service_1.WelcomeService, login_service_1.LoginService, dashboard_service_1.DashboardService, assetView_service_1.AssetViewService, userUpdate_service_1.UserUpdateService, assetUpdate_service_1.AssetUpdateService,
                 { provide: 'baseUrl', useValue: baseUrl }
             ],
             bootstrap: [app_component_1.AppComponent]

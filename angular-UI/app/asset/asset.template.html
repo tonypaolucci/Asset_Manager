@@ -1,54 +1,63 @@
-
+<!--asset entry form-->
         <div  class="row">
           <div class="col-sm-4">
-            <!--<div class="form-group">
-              <input type="text" [(ngModel)]="asset.assetNum" placeholder="Asset Number" class="form-control">
-            </div><br>-->
             <div class="form-group">
               <label>Manufacturer</label>
               <input type="text" [(ngModel)]="asset.manufacturer" placeholder="Manufacturer" class="form-control">
-            </div><br>
+            </div>
             <div class="form-group">
+              <label>Model Number </label>
               <input type="text" [(ngModel)]="asset.modelNum" placeholder="Model Number" class="form-control">
-            </div><br>
+            </div>
              <div class="form-group">
-              <input type="text" [(ngModel)]="asset.assignedUser" placeholder="Assigned to " class="form-control">
-            </div><br>
+               <label>Assigned to </label>
+              <input type="text" [(ngModel)]="asset.assignedUser" placeholder="Employee Email " class="form-control">
+            </div>
             <div class="form-group">
+              <label>Style Code</label>
               <input type="text" [(ngModel)]="asset.styleCode" placeholder="Style Code" class="form-control">
-            </div><br>
+            </div>
           </div>
              <div class="col-sm-4">
             <div class="form-group">
+              <label>Serial Number</label>
               <input type="text" [(ngModel)]="asset.serialNum" placeholder="Serial Number" class="form-control">
-            </div><br>
+            </div>
               <div class="form-group">
+                <label>Date Purchassed</label>
               <input type="date" [(ngModel)]="asset.datePurchased" placeholder="Date Purchassed" class="form-control">
-            </div><br>
+            </div>
               <div class="form-group">
+                <label>Location</label>
               <input type="text" [(ngModel)]="asset.location" placeholder="Location" class="form-control">
-            </div><br>
+            </div>
               <div class="form-group">
+                <label>Name</label>
               <input type="text" [(ngModel)]="asset.name" placeholder="Name" class="form-control">
-            </div><br>
+            </div>
              </div>
               <div class="col-sm-4">
               <div class="form-group">
+                <label>Type</label>
               <input type="text" [(ngModel)]="asset.type" placeholder="Type" class="form-control">
-            </div><br>
+            </div>
               <div class="form-group">
+                <label>Date of Last Service</label>
               <input type="date" [(ngModel)]="asset.dateLastServiced" placeholder="Date of Last Service" class="form-control">
-            </div><br>
+            </div>
               <div class="form-group">
+                <label>Date of Next Service</label>
               <input type="date" [(ngModel)]="asset.dateNextService" placeholder="Date of Next Service" class="form-control">
-            </div><br>
+            </div>
               <div class="form-group">
+                <label>Version</label>
               <input type="text" [(ngModel)]="asset.version" placeholder="Version" class="form-control">
-            </div><br>
+            </div>
               </div></div>
               <div class="row">
               <div class="col-sm-12">
             <div class="form-group">
+              <label>Notes</label>
               <textarea rows=5 cols=10 [(ngModel)]="asset.notes" placeholder="Notes..." class="form-control"></textarea>
             </div></div>
             <div class="row">

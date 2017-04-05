@@ -1,0 +1,73 @@
+
+        <div  class="row">
+          <div class="col-sm-4">
+            <label>Search for a user.</label>
+          </div>
+          </div>
+        <div  class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+                
+              <input type="search" [(ngModel)]="search" placeholder="Email" class="form-control">
+              <!--<input type="text" [(ngModel)]="assetView.search" #asset placeholder="E" class="form-control">-->
+            </div><br>
+          </div>
+             <div class="col-sm-4">
+            <div class="form-group">
+                 <button type="submit" (click) = "onSearch()" class="btn btn-success">Search</button>
+              <label>User</label>
+              <input type="text" [(ngModel)]="user.userName" placeholder="User Name" class="disabled">
+            </div>
+            </div></div>
+            
+               <div  class="row">
+          <div class="col-sm-4">
+            <!--<div class="form-group">
+              <input type="text" [(ngModel)]="asset.assetNum" placeholder="Asset Number" class="form-control">
+            </div><br>-->
+            <!--<div class="form-group">
+              <label>User</label>
+              <input type="text" [(ngModel)]="user.userName" placeholder="User Name" class="form-control">
+            </div><br>-->
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" [(ngModel)]="user.firstName" placeholder="First Name" class="form-control">
+            </div>
+             <div class="form-group">
+               <label>Last Name</label>
+              <input type="text" [(ngModel)]="user.lastName" placeholder="Last Name" class="form-control">
+            </div>
+           
+            <!--<div class="form-group">
+              <input type="text" [(ngModel)]="user.email" placeholder="Email" class="form-control">
+            </div><br>-->
+              <div class="form-group">
+                <label>Access Level</label>
+              <input type="text" [(ngModel)]="user.accessLevel" placeholder="Access Level" class="form-control">
+            </div>
+            
+             </div>
+          </div>
+          <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+                 <button type="submit" (click) = "onSubmit()" class="btn btn-success">Submit</button>
+            </div>
+            </div></div>
+           
+  <!--Modal form display code-->
+  <!--<app-modal>
+    <div class="app-modal-header">
+      Equipment Details
+    </div>
+    <div class="app-modal-body">
+      Whatever content you like, form fields, anything
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>-->
+      <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+    <!--</div>
+  </app-modal>
+            </div>-->
+
+  

@@ -16,17 +16,12 @@ export class LoginService{
     submitLoginDetails(login:Login) : Observable<Login>{
         return this.http.post(`http://localhost:8080/login`,login).map(res => res.json() as Login)
     }
-   
+   // sends an http request using the entered username and pasword to get the information of that user.
      login(userName:string, pass:string) : Observable<Users>{
           let login = new Login();
           let params:URLSearchParams = new URLSearchParams();
-    //let params = {};
         params.set('userName', userName);
         params.set('pass', pass);
-    //login.userName = this.userName;
-    //login.pass = this.pass;
-         
-         //params.set('userName', userName);
         return this.http.get(`http://localhost:8080/login`,{search:params}).map(res => res.json() as Users)
     }
 

@@ -16,7 +16,6 @@ var users_service_1 = require("../users/users.service");
 var login_service_1 = require("../login/login.service");
 var router_1 = require("@angular/router");
 var RegistrationComponent = (function () {
-    //usersService:UsersService;
     function RegistrationComponent(registrationService, usersService, loginService, router) {
         this.registrationService = registrationService;
         this.usersService = usersService;
@@ -25,13 +24,12 @@ var RegistrationComponent = (function () {
     }
     RegistrationComponent.prototype.ngOnInit = function () {
         this.users = new users_model_1.Users();
-        //this.usersService = new UsersService();
         this.registration = new registration_model_1.Registration();
     };
     RegistrationComponent.prototype.onSubmit = function () {
+        // get a user feom the database for login
         this.usersService.submitUsersDetails(this.users).subscribe();
-        this.router.navigate(['dashboard']);
-        //this.registrationService.submitRegistrationDetails(this.registration).subscribe();
+        this.router.navigate(['login']);
     };
     RegistrationComponent.prototype.onCancel = function () {
         this.router.navigate(['welcome']);
@@ -43,7 +41,7 @@ RegistrationComponent = __decorate([
         moduleId: module.id,
         selector: 'registration-form',
         templateUrl: 'registration.template.html',
-        styleUrls: ['/css']
+        styleUrls: ['./styles.css']
     }),
     __metadata("design:paramtypes", [registration_service_1.RegistrationService, users_service_1.UsersService, login_service_1.LoginService,
         router_1.Router])

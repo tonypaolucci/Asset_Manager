@@ -19,7 +19,7 @@ private router:Router){}
 ngOnInit(){
     this.asset = new Asset();
 }
- 
+//  method call to the service
   onSubmit() { 
 
     this.assetService.submitAssetDetails(this.asset).subscribe();

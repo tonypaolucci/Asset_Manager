@@ -11,10 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var http_1 = require("@angular/http");
 var core_1 = require("@angular/core");
 require("rxjs/add/operator/map");
+// Sends an http post with the entered asset object for new asset 
 var AssetService = (function () {
     function AssetService(http) {
         this.http = http;
     }
+    // calls to save new asset
     AssetService.prototype.submitAssetDetails = function (asset) {
         return this.http.post("http://localhost:8080/asset", asset).map(function (res) { return res.json(); });
     };

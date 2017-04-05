@@ -8,8 +8,10 @@ import {Users} from './users.model';
 export class UsersService{
     http:Http;
     loggedinUser:Users;
+    login:string;
     constructor(http :Http){
         this.http=http;
+        this.login = 'Login'
     }
     submitUsersDetails(users:Users) : Observable<Users>{
         return this.http.post(`http://localhost:8080/users`,users).map(res => res.json() as Users)
@@ -21,6 +23,7 @@ export class UsersService{
     //let params = {};
         params.set('userName', userName);
         //params.set('pass', pass);
+        
         return this.http.get(`http://localhost:8080/login`,{search:params}).map(res => res.json() as Users)
     }
 }

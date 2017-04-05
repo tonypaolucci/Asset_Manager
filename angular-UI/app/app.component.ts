@@ -5,7 +5,9 @@ import{UsersService} from './users/users.service';
   selector: 'my-app',
   template: '<home></home>'
 })
+
 export class AppComponent { 
+// access to users servicce for login
   constructor(private usersService:UsersService,
 ){}
 ngOnInit(){

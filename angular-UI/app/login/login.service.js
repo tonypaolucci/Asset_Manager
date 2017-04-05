@@ -19,15 +19,12 @@ var LoginService = (function () {
     LoginService.prototype.submitLoginDetails = function (login) {
         return this.http.post("http://localhost:8080/login", login).map(function (res) { return res.json(); });
     };
+    // sends an http request using the entered username and pasword to get the information of that user.
     LoginService.prototype.login = function (userName, pass) {
         var login = new login_model_1.Login();
         var params = new http_1.URLSearchParams();
-        //let params = {};
         params.set('userName', userName);
         params.set('pass', pass);
-        //login.userName = this.userName;
-        //login.pass = this.pass;
-        //params.set('userName', userName);
         return this.http.get("http://localhost:8080/login", { search: params }).map(function (res) { return res.json(); });
     };
     return LoginService;

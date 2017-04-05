@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var users_service_1 = require("./users/users.service");
 var AppComponent = (function () {
+    // access to users servicce for login
     function AppComponent(usersService) {
         this.usersService = usersService;
     }

@@ -11,8 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var assetView_service_1 = require("./assetView.service");
 var assetView_model_1 = require("./assetView.model");
+var asset_model_1 = require("../asset/asset.model");
 var router_1 = require("@angular/router");
 var users_service_1 = require("../users/users.service");
+var modal_component_1 = require("../modal/modal.component");
 var AssetViewComponent = (function () {
     function AssetViewComponent(assetService, usersService, router) {
         this.assetService = assetService;
@@ -21,14 +23,25 @@ var AssetViewComponent = (function () {
     }
     AssetViewComponent.prototype.ngOnInit = function () {
         this.assetView = new assetView_model_1.AssetView();
-        //this.asset = new Asset();
+        this.asset = new asset_model_1.Asset();
+        this.modalAsset = new asset_model_1.Asset();
         this.search = '';
     };
     AssetViewComponent.prototype.onSubmit = function () {
-        this.assetService.getAssetsByEmail(this.search).subscribe();
+        var _this = this;
+        // get an array of assets to show in a table
+        this.assetService.getAssetsByEmail(this.search).subscribe(function (data) {
+            _this.assets = data;
+        });
+    };
+    AssetViewComponent.prototype.onclick = function (assetNum) {
     };
     return AssetViewComponent;
 }());
+__decorate([
+    core_1.ViewChild(modal_component_1.ModalComponent),
+    __metadata("design:type", modal_component_1.ModalComponent)
+], AssetViewComponent.prototype, "modal", void 0);
 AssetViewComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

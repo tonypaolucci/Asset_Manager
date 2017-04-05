@@ -14,11 +14,6 @@ require("rxjs/add/operator/map");
 var RegistrationService = (function () {
     function RegistrationService(http) {
         this.http = http;
-        // this.baseUrl=baseUrl;
-        // this.countStudentEndPoint='/countStudent';
-        // this.findStudentEndPoint ='/findStudentById';
-        // this.findStudentNumberEndPoint = '/findStudentNumberById';
-        // this.submitStudentDetailsEndPoint='/submitStudentDetails';
     }
     RegistrationService.prototype.submitRegistrationDetails = function (registration) {
         return this.http.post("http://localhost:8080/registration", registration).map(function (res) { return res.json(); });

@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//defines the asset table
 @Entity
 @Table(name="asset")
 public class Asset {
@@ -43,7 +43,7 @@ public class Asset {
 	String assignedUser;
 	
 	public Asset(){}
-	
+	//getters and setters
 	public String getAssignedUser() {
 		return assignedUser;
 	}

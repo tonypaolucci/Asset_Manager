@@ -16,6 +16,10 @@ import { AccessComponent }   from './access/access.component';
 import {LoginComponent }   from './login/login.component';
 import { AssetViewService }   from './assetView/assetView.service';
 import {AssetViewComponent }   from './assetView/assetView.component';
+import { UserUpdateService }   from './userUpdate/userUpdate.service';
+import {UserUpdateComponent }   from './userUpdate/userUpdate.component';
+import { AssetUpdateService }   from './assetUpdate/assetUpdate.service';
+import {AssetUpdateComponent }   from './assetUpdate/assetUpdate.component';
 
 import { RegistrationComponent }   from './registration/registration.component';
 import {appRouting} from './app.routing';
@@ -23,15 +27,14 @@ import {HomeComponent} from './home/home.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import { DashboardService }   from './dashboard/dashboard.service';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import {DashComponent} from './startbootstrap-sb-admin-gh-pages/dash.component';
-import {DashService} from './startbootstrap-sb-admin-gh-pages/dash.service';
+import { ModalComponent }   from './modal/modal.component';
 
 export function AppModule(baseUrl:string){ 
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,HttpModule,appRouting ],
-  declarations: [ AppComponent,HomeComponent, RegistrationComponent, UsersComponent, AccessComponent, AssetComponent, WelcomeComponent, LoginComponent, DashboardComponent,DashComponent,AssetViewComponent ],
-  providers: [UsersService,RegistrationService,AssetService,AccessService,WelcomeService,LoginService,DashboardService,DashService,AssetViewService,
+  declarations: [ AppComponent,HomeComponent, RegistrationComponent, UsersComponent, AccessComponent, AssetComponent, WelcomeComponent, LoginComponent, DashboardComponent,AssetViewComponent,ModalComponent,UserUpdateComponent,AssetUpdateComponent ],
+  providers: [UsersService,RegistrationService,AssetService,AccessService,WelcomeService,LoginService,DashboardService,AssetViewService,UserUpdateService,AssetUpdateService,
    {provide :'baseUrl', useValue:baseUrl} 
   ],
   bootstrap:    [ AppComponent ]

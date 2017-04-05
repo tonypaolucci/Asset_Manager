@@ -13,18 +13,15 @@ var dashboard_service_1 = require("./dashboard.service");
 var users_service_1 = require("../users/users.service");
 var router_1 = require("@angular/router");
 var DashboardComponent = (function () {
-    //userService:UsersService;
     function DashboardComponent(dashboardService, usersService, router) {
         this.dashboardService = dashboardService;
         this.usersService = usersService;
         this.router = router;
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        //this.login = new Login();
         this.userName = '';
         this.pass = '';
         this.errorMessage = '';
-        //this.userService = this.usersService;
     };
     return DashboardComponent;
 }());

@@ -1,3 +1,4 @@
+
 export class Asset{
     assetNum:Number;
 	manufacturer:string;

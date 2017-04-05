@@ -13,18 +13,14 @@ import {Router} from'@angular/router';
 
 export class DashboardComponent implements OnInit{
 
-//login:Login;
 userName:string;
 pass:string;
 errorMessage:string;
-//userService:UsersService;
 
 constructor(private dashboardService:DashboardService, private usersService:UsersService,
 private router:Router){}
 ngOnInit(){
-    //this.login = new Login();
     this.userName = '';
     this.pass = '';
     this.errorMessage = '';
-    //this.userService = this.usersService;
 }}

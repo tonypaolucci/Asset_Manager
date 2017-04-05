@@ -9,14 +9,13 @@ import {Router} from'@angular/router';
   moduleId: module.id,
   selector: 'registration-form',
   templateUrl: 'registration.template.html',
-  styleUrls: ['/css']
+  styleUrls: ['./styles.css']
   
 })
 export class RegistrationComponent implements OnInit{
 
 registration:Registration;
 users:Users;
-//usersService:UsersService;
 
 constructor(private registrationService:RegistrationService, private usersService:UsersService, private loginService:LoginService,
 private router:Router){
@@ -24,15 +23,13 @@ private router:Router){
 }
 ngOnInit(){
     this.users = new Users();
-    //this.usersService = new UsersService();
     this.registration = new Registration();
 }
  
   onSubmit() { 
-
+// get a user feom the database for login
     this.usersService.submitUsersDetails(this.users).subscribe();
-    this.router.navigate(['dashboard'])
-    //this.registrationService.submitRegistrationDetails(this.registration).subscribe();
+    this.router.navigate(['login'])
 
   }
   onCancel() {

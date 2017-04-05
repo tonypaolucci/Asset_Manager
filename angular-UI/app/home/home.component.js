@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var users_service_1 = require("../users/users.service");
+// home component is used for displaying navbar
 var HomeComponent = (function () {
-    //userService:UsersService;
     function HomeComponent(usersService) {
         this.usersService = usersService;
     }
@@ -21,10 +21,7 @@ var HomeComponent = (function () {
         this.age = '';
         this.telephone = '';
         this.email = '';
-        //this.loginComponent.userService.loggedinUser.firstName;
-        //this.usersService.loggedinUser = new Users();
-        //this.usersService.loggedinUser.firstName = '';
-        //this.usersService.loggedinUser.lastName = '';
+        this.login = 'Login';
     };
     HomeComponent.prototype.onSubmit = function () { };
     return HomeComponent;
@@ -34,7 +31,7 @@ HomeComponent = __decorate([
         moduleId: module.id,
         selector: 'home',
         templateUrl: 'home.template.html',
-        styleUrls: ['jumbotron.css']
+        styleUrls: ['jumbotron.css',]
     }),
     __metadata("design:paramtypes", [users_service_1.UsersService])
 ], HomeComponent);

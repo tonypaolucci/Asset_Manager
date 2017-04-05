@@ -9,11 +9,12 @@ import {AssetViewComponent} from './assetView/assetView.component';
 import {AccessComponent} from './access/access.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {DashComponent} from './startbootstrap-sb-admin-gh-pages/dash.component';
+import {ModalComponent} from './modal/modal.component';
+
 const appRoutes: Routes = [
 {
     path:'',
-    redirectTo:'dashboard',
+    redirectTo:'welcome',
     pathMatch:'full'
 
 },
@@ -57,11 +58,13 @@ const appRoutes: Routes = [
     component:DashboardComponent
 
 },
+// routing for a future modal form
 {
-    path:'dash',
-    component:DashComponent
+    path:'modal',
+    component:ModalComponent
 
 }
+
 
 ];
 export const appRouting:ModuleWithProviders = RouterModule.forRoot(appRoutes);

@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//defines user entity information
 @Entity
 @Table(name = "Users")
 public class Users {

@@ -15,7 +15,7 @@ export class AssetViewService{
     submitAssetViewDetails(assetView:AssetView) : Observable<AssetView>{
         return this.http.post(`http://localhost:8080/asset`,assetView).map(res => res.json() as AssetView)
     }
-     getAssetsByEmail(email:string) : Observable<Asset>{
+     getAssetsByEmail(email:string) : Observable<Asset[]>{
           let asset = new Asset();
           let params:URLSearchParams = new URLSearchParams();
     //let params = {};
@@ -24,6 +24,6 @@ export class AssetViewService{
     //login.pass = this.pass;
          
          //params.set('userName', userName);
-        return this.http.get(`http://localhost:8080/assigned_asset`,{search:params}).map(res => res.json() as Asset)
+        return this.http.get(`http://localhost:8080/assigned_asset`,{search:params}).map(res => res.json() as Asset[])
     }
 }

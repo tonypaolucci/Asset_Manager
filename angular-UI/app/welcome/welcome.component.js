@@ -10,15 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var welcome_service_1 = require("./welcome.service");
+var users_service_1 = require("../users/users.service");
 var welcome_model_1 = require("./welcome.model");
 var router_1 = require("@angular/router");
 var WelcomeComponent = (function () {
-    function WelcomeComponent(welcomeService, router) {
+    function WelcomeComponent(welcomeService, usersService, router) {
         this.welcomeService = welcomeService;
+        this.usersService = usersService;
         this.router = router;
     }
     WelcomeComponent.prototype.ngOnInit = function () {
         this.welcome = new welcome_model_1.Welcome();
+        this.usersService.loggedinUser = null;
     };
     WelcomeComponent.prototype.onSubmit = function () {
         this.welcomeService.submitWelcomeDetails(this.welcome).subscribe();
@@ -32,7 +35,7 @@ WelcomeComponent = __decorate([
         templateUrl: 'welcome.template.html',
         styleUrls: ['./welcome.css']
     }),
-    __metadata("design:paramtypes", [welcome_service_1.WelcomeService,
+    __metadata("design:paramtypes", [welcome_service_1.WelcomeService, users_service_1.UsersService,
         router_1.Router])
 ], WelcomeComponent);
 exports.WelcomeComponent = WelcomeComponent;

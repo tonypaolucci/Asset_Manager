@@ -1,4 +1,4 @@
-
+<!--table setup to show a users assigned assets-->
         <div  class="row">
           <div class="col-sm-4">
             <label>Search all equipment assigned to employee using email.</label>
@@ -8,8 +8,7 @@
           <div class="col-sm-4">
             <div class="form-group">
                 
-              <input type="search" [(ngModel)]="assetView.search" placeholder="Email" class="form-control">
-              <!--<input type="text" [(ngModel)]="assetView.search" #asset placeholder="E" class="form-control">-->
+              <input type="search" [(ngModel)]="search" placeholder="Email" class="form-control">
             </div><br>
           </div>
           <div class="col-sm-4">
@@ -22,18 +21,74 @@
                   <table class="table table-condensed table-hover table-responsive">
                     <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
+                        <th>Name</th>
+                        <th>Asset Number</th>
+                        <th>Manufacturer</th>
+                        <th>Model Number</th>
+                        <th>Style Code</th>
+                        <th>Serial Number</th>
+                        <th>Type</th>
+                        <th>Version</th>
+                        <th>Location</th>
+                        <th>Date Purchased</th>
+                        <th>Last Service</th>
+                        <th>Next Service</th>
+                        <th>Notes</th>
                     </tr>
                     </thead>
                     <tbody>
-                   <tr *ngFor="let s of asset">
-                     <td>{{s.firstName}} {{s.lastName}} {{s.email}} {{s.telephone}}</td>
+                   <tr *ngFor="let s of assets"> <!--(click)="modal.show()" use for future row click event -->
+                     <td>{{s.name}}</td>
+                     <td> {{s.assetNum}}</td>
+                      <td> {{s.manufacturer}}</td>
+                       <td> {{s.modelNum}}</td>
+                        <td> {{s.styleCode}}</td>
+                         <td>  {{s.serialNum}}</td>
+                          <td> {{s.type}}</td>
+                          <td> {{s.version}}</td>
+                          <td> {{s.location}}</td>
+                          <td> {{s.datePurchased}}</td>
+                          <td> {{s.dateLastServiced}}</td>
+                          <td> {{s.dateNextService}}</td>
+                          <td> {{s.notes}}</td>
                   </tr>
                     </tbody>
                 </table>
               </div>
+  <!--Modal form display code-->
+  <app-modal>
+    <div class="app-modal-header">
+      Equipment Details
+    </div>
+    <div class="app-modal-body">
+      Whatever content you like, form fields, anything
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+    </div>
+  </app-modal>
+
+
+<!--Modal form code future enhancement-->
+            <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">-->
+    
+      <!-- Modal content-->
+      <!--<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>-->
             </div>
 
-          
+  

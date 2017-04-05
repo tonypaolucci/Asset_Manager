@@ -20,6 +20,7 @@ var AssetComponent = (function () {
     AssetComponent.prototype.ngOnInit = function () {
         this.asset = new asset_model_1.Asset();
     };
+    //  method call to the service
     AssetComponent.prototype.onSubmit = function () {
         this.assetService.submitAssetDetails(this.asset).subscribe();
         this.success = 'SUCCESS!';
